@@ -2,10 +2,10 @@
     <div class="px-5 py-2 flex items-center justify-between bg-gradient-to-b from-gray-700 via-gray-900 to-black" >
         <div class="flex items-center gap-3">
             <button class="rounded-full hover:bg-gray-500 flex  items-center justify-center " type="button" name="button">
-                <img class="object-contain h-9 w-9" src="https://seeklogo.com/images/P/pinterest-logo-8561DDA2E1-seeklogo.com.png" alt="logo">
+                <img class="object-contain h-20 w-20" src="https://cdn1.iconfinder.com/data/icons/kind-of-cameras-glyphs/512/14-512.png" alt="logo">
             </button>
             <button  :class="`${selectedTab===item.key ? 'bg-black text-white' : 'text-dark hover:bg-light' } rounded-full py-2 px-5 font-semibold`" v-for="item in tabItems" :key="item.key" @click="selectedTab = item.key">
-            {{item.name}}
+           <router-link :to="item.path">{{item.name}}</router-link> 
             </button>
         </div>
         <div class="flex-grow relative pl-5">
@@ -37,8 +37,8 @@ export default {
     data() {
         return {
             tabItems : [
-                {name:'Home', key:'home'},
-                {name:'Today', key:'today'},
+                {name:'Home', key:'home' , path:'/' },
+                {name:'About', key:'about' , path: 'about' },
             ],
             selectedTab: 'home'
         }

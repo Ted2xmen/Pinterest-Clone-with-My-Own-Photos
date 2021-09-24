@@ -1,17 +1,15 @@
 <template>
   <div class="home">
     <div>
-     <div class="px-20  w-full flex flex-wrap">
-      <div v-for="(array, index) in  subArrays" :key="index" class="w-1/5 ">
-          <div v-for="(card, index) in cards" :key="index"  class="w-full">
+     <div class="px-20 py-6 w-full flex flex-wrap">
+        <div v-for="(card, index) in cards" :key="index"  class="w-1/5">
             <div class="w-full p-2">
              <Card :user="`${card.user}`" :board="`${card.title}`" class="w-full h-full" :srcImage="`${card.src}`" />
-             <div class="text-sm leading-tight pt-2">
+             <div class="text-sm">
             
              </div>
           </div>
         </div>
-      </div>
      </div>
     </div>
   </div>
@@ -27,18 +25,7 @@ export default {
   
     Card
   },
-computed: {
-  subArrays(){
-    var length = Math.ceil(this.cards.length / 5);
-    const result = new Array(length)
-    .fill() 
-    .map((i)=> {
-      console.log(i);
-      return this.cards.splice(0, length)
-    })
-    return result
-  }
-},
+
 
   data(){
     return {

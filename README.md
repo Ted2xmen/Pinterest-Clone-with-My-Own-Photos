@@ -2,6 +2,7 @@
 
 Vue 3 + Tailwind
 
+TODO: MASONRY
 
 
 Tutorial:  https://youtu.be/aL28CSfKIww
