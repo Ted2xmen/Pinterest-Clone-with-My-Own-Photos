@@ -1,10 +1,14 @@
 # Pinterest Clone
 
-Vue 3 + Tailwind
+Vue 3 + Tailwind Pinterest Clone
+ 
+TODO
+- Masonry
+- Search & Filter
+- Responsive
 
+ <img src="src\assets\pinterest.png" alt="pinterest" />
 
-
-![TODO: MASONRY!](src\assets\pinterest.png "Pinterest Clone")
 
 Tutorial:  https://youtu.be/aL28CSfKIww
 
